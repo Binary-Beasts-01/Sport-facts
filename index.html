@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sport Facts</title>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 
 
@@ -17,7 +17,7 @@
         <div class="navbar">
             <img src="/assets/img/logo2.jpg" alt="" class="logo">
             <nav>
-                <ul>
+                <ul id="menuList">
                     <li><a href="">About</a></li>
                     <li><a href="">Gallery</a></li>
                     <li><a href="">Contact us</a></li>
@@ -30,7 +30,7 @@
                     </li>
                 </ul>
             </nav>
-            <img src="./assets/img/menu.png" alt="" class="menu-icon">
+            <img src="./assets/img/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
         </div>
 
         <div class="row">
@@ -42,16 +42,217 @@
                 <button type="button">For More <img src="./assets/img/arrow.png" alt=""></button>
             </div>
             <div class="col-2">
-                <img src="./assets/img/lionel-messi-vs-cristiano-ronaldo-2017-png-messi-neymar-ronaldo-png-781_1023.png" alt="" class="controller">
+                <img src="./assets/img/lionel-messi-vs-cristiano-ronaldo-2017-png-messi-neymar-ronaldo-png-781_1023.png"
+                    alt="" class="controller">
                 <div class="color-box"><img src="./assets/img/trophy.png" alt=""></div>
-                
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
+    <section class="cards-section">
+        <div class="cards-title">
+            <h2>Outstanding Players</h2>          
+        </div>
+        <div class="ui link cards">
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/messi2.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Lionel Messi</div>
+                    <div class="meta">
+                        <a>RW</a>
+                    </div>
+                    <div class="description">
+                        Messi is a 6 time Balland'or Winner.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        FC Barcelona
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        75 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/ronaldo.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Cristiano Ronaldo</div>
+                    <div class="meta">
+                        <a>LW</a>
+                    </div>
+                    <div class="description">
+                        Ronaldo is top goal scorer of all time.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Juventus
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        75 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="/assets/img/neymar.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Neymar</div>
+                    <div class="meta">
+                        <span class="date">LW</span>
+                    </div>
+                    <div class="description">
+                        Neymar is known for his skills & dribbles.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        PSG
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        35 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/fernandes.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Fernandes</div>
+                    <div class="meta">
+                        <a>Coworker</a>
+                    </div>
+                    <div class="description">
+                        Fernandes is a sharpshooter midfielder.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Manchester United
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        151 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/suarez.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Luis Suarez</div>
+                    <div class="meta">
+                        <a>ST</a>
+                    </div>
+                    <div class="description">
+                        Luis Suarez is a rocket shooter.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Manchester United
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        151 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/lewandowski.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Lewandowski</div>
+                    <div class="meta">
+                        <a>ST</a>
+                    </div>
+                    <div class="description">
+                        Lewandowski is a deadly finisher.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Bayern Munchen
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        15 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/mbappe.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Kylian Mbappe</div>
+                    <div class="meta">
+                        <a>RW</a>
+                    </div>
+                    <div class="description">
+                        Kylian is a remarkable youngster.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        PSG
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        51 Views
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/debruyne.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">Kevin Debruyne</div>
+                    <div class="meta">
+                        <a>CAM</a>
+                    </div>
+                    <div class="description">
+                        Debruyne is a spectacular midfielder .
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Manchester City
+                    </span>
+                    <span>
+                        <i class="user icon"></i>
+                        151 Views
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="social-links">
+            <img src="./assets/img/fb.png" alt="">
+            <img src="./assets/img/tw.png" alt="">
+            <img src="./assets/img/ig.png" alt="">
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
