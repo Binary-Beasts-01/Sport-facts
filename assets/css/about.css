@@ -68,8 +68,9 @@
     box-shadow: var(--box-shadow);
 }
 
-.
-
+.services-img img{
+    height: 350px;
+}
 
 
 /* End Services Area */ 
