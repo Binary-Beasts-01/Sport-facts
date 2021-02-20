@@ -3,244 +3,180 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sport Facts</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--  custom css file  -->
     <link rel="stylesheet" href="./assets/css/main.css">
-
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="navbar">
-            <img src="/assets/img/logo2.jpg" alt="" class="logo">
-            <nav>
-                <ul id="menuList">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">Login</a></li>
-                    <li>
-                        <div class="ui icon input">
-                            <input type="text" placeholder="Search...">
-                            <i class="search link icon"></i>
-                        </div>
-                    </li>
-                </ul>
+
+
+    <!--  ======================= Start Header Area ============================== -->
+
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="./assets/img/soccer-ball-scrolly-wings-thumb.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+
+                    </ul>
+                </div>
             </nav>
-            <img src="./assets/img/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
         </div>
+    </header>
 
-        <div class="row">
-            <div class="col-1">
-                <h2>All About <br>Football</h2>
-                <h3>Players and Teams Journey</h3>
-                <p>Know about your favourite player and team</p>
-                <h4>Enjoy</h4>
-                <button type="button">For More <img src="./assets/img/arrow.png" alt=""></button>
-            </div>
-            <div class="col-2">
-                <img src="./assets/img/lionel-messi-vs-cristiano-ronaldo-2017-png-messi-neymar-ronaldo-png-781_1023.png"
-                    alt="" class="controller">
-                <div class="color-box"><img src="./assets/img/trophy.png" alt=""></div>
-            </div>
-        </div>
-    </div>
+    <!--  ======================= End Header Area ============================== -->
 
-    <section class="cards-section">
-        <div class="cards-title">
-            <h2>Outstanding Players</h2>          
-        </div>
-        <div class="ui link cards">
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/messi2.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Lionel Messi</div>
-                    <div class="meta">
-                        <a>RW</a>
+    <!--  ======================= Start Main Area ================================ -->
+    <main class="site-main">
+        <!--  ======================= Start Banner Area =======================  -->
+        <section class="site-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 site-title">
+                        <h3 class="title-text mb-3">Welcome</h3>
+                        <h1 class="title-text text-uppercase mb-3">About Football</h1>
+                        <h4 class="title-text text-uppercase mb-3">Get anything related to Football</h4>
+                        <div class="site-buttons">
+                            <div class="d-flex flex-row flex-wrap">
+                                <button type="button" class="btn button primary-button mr-4 text-uppercase">For More</button>
+                                <!-- <button type="button" class="btn button secondary-button text-uppercase">Get cv</button> -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="description">
-                        Messi is a 6 time Balland'or Winner.
+                    <div class="col-lg-6 col-md-12 banner-image">
+                        <img src="./assets/img/lionel-messi-vs-cristiano-ronaldo-2017-png-messi-neymar-ronaldo-png-781_1023.png" alt="banner-img" class="img-fluid">
                     </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        FC Barcelona
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        75 Views
-                    </span>
                 </div>
             </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/ronaldo.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Cristiano Ronaldo</div>
-                    <div class="meta">
-                        <a>LW</a>
+        </section>
+        <!--  ======================= End Banner Area =======================  -->
+
+        <!--  ========================= About Area ==========================  -->
+
+        <section class="about-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                        <div class="about-image">
+                            <img src="./assets/img/unnamed.png" alt="About us" class="img-fluid">
+                        </div>
                     </div>
-                    <div class="description">
-                        Ronaldo is top goal scorer of all time.
+                    <div class="col-lg-6 col-md-12 about-title">
+                        <h2 class="text-uppercase pt-5">
+                            <span>Know about</span>
+                            <span>your favourite</span>
+                            <span>player</span>
+                        </h2>
+                        <div class="paragraph py-4 w-75">
+                            <p class="para">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
+                                possimus officia maiores perferendis ut! Quos, perspiciatis.
+                            </p>
+                            <p class="para">
+                                It is a long established fact that a reader will be distracted by the readable content
+                                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
+                                here
+                            </p>
+                        </div>
+                        <button type="button" class="btn button primary-button text-uppercase">For More</button>
                     </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Juventus
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        75 Views
-                    </span>
                 </div>
             </div>
-            <div class="card">
-                <div class="image">
-                    <img src="/assets/img/neymar.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Neymar</div>
-                    <div class="meta">
-                        <span class="date">LW</span>
-                    </div>
-                    <div class="description">
-                        Neymar is known for his skills & dribbles.
+        </section>
+
+        <!--  ========================= End About Area ==========================  -->
+
+        <section>
+            <div class="container player-card">
+                <div class="row mb-3">
+                    <div class="col d-flex justify-content-center">
+                        <h1>Players</h1>
                     </div>
                 </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        PSG
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        35 Views
-                    </span>
+
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview (1).jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview (1).jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/fernandes.jpg">
+                <div class="row mb-3">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/img/preview (1).jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                  </div>
                 </div>
-                <div class="content">
-                    <div class="header">Fernandes</div>
-                    <div class="meta">
-                        <a>Coworker</a>
-                    </div>
-                    <div class="description">
-                        Fernandes is a sharpshooter midfielder.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Manchester United
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        151 Views
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/suarez.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Luis Suarez</div>
-                    <div class="meta">
-                        <a>ST</a>
-                    </div>
-                    <div class="description">
-                        Luis Suarez is a rocket shooter.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Manchester United
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        151 Views
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/lewandowski.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Lewandowski</div>
-                    <div class="meta">
-                        <a>ST</a>
-                    </div>
-                    <div class="description">
-                        Lewandowski is a deadly finisher.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Bayern Munchen
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        15 Views
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/mbappe.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Kylian Mbappe</div>
-                    <div class="meta">
-                        <a>RW</a>
-                    </div>
-                    <div class="description">
-                        Kylian is a remarkable youngster.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        PSG
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        51 Views
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image">
-                    <img src="./assets/img/debruyne.jpg">
-                </div>
-                <div class="content">
-                    <div class="header">Kevin Debruyne</div>
-                    <div class="meta">
-                        <a>CAM</a>
-                    </div>
-                    <div class="description">
-                        Debruyne is a spectacular midfielder .
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Manchester City
-                    </span>
-                    <span>
-                        <i class="user icon"></i>
-                        151 Views
-                    </span>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+              </div>
+        </section>
+    </main>
 
     <section class="footer-section">
         <div class="social-links">
