@@ -1,262 +1,261 @@
-
-/* import fonts from fonts.css file */ 
+/* import fonts from fonts.css file */
 @import url(./fonts.css);
 
-
-/* css variables */ 
-html, body{
-    margin: 0%;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+/* css variables */
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
+/* CSS Variables */
 
-/* CSS Variables */ 
+:root {
+  --primary-color: #4458dc;
+  --primary-color2: #854fee;
+  --title-color: #141313;
+  --text-color: #777777;
+  --border-color: #201f1f17;
+  --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
 
-:root{
-    --primary-color: #4458dc;
-    --primary-color2: #854fee;
-    --title-color: #141313;
-    --text-color: #777777;  
-    --border-color: #201f1f17;  
-    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-    --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
-    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-   
-
-    /* font family variables. */ 
-    --roboto: 'Roboto', cursive;
-} 
-
-/* Global Classes */ 
-
-.title-text{
-    font: normal bold 50px/ 72px var(--roboto);
+  /* font family variables. */
+  --roboto: 'Roboto', cursive;
 }
 
-.text-uppercase{
-    text-transform: uppercase;
+/* Global Classes */
+
+.title-text {
+  font: normal bold 50px/ 72px var(--roboto);
 }
 
-/* Buttons */ 
-
-.button{
-    padding: .8rem 2.2rem;
-    font: normal 500 16px/20px var(--roboto);
-    position: relative;
-    border: 3px solid transparent;
-    border-radius: 4px;
+.text-uppercase {
+  text-transform: uppercase;
 }
 
-.button.primary-button{
-    background: var(--gradient-color);
-    background-clip: padding-box;
-    color: whitesmoke;
-    transition: background .6s ease;
-    box-shadow: var(--box-shadow);
+/* Buttons */
+
+.button {
+  padding: 0.8rem 2.2rem;
+  font: normal 500 16px/20px var(--roboto);
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 4px;
 }
 
-.button.primary-button:hover{
-    background: whitesmoke;
-    background-clip: padding-box;
-    color: black;
+.button.primary-button {
+  background: var(--gradient-color);
+  background-clip: padding-box;
+  color: whitesmoke;
+  transition: background 0.6s ease;
+  box-shadow: var(--box-shadow);
 }
 
-.button.primary-button::after, .button.secondary-button::after{
-    position: absolute;
-    top: -2px; left: -2px;
-    bottom: -2px;  right: -2px;
-    background: var(--gradient-color);
-    content: ' ';
-    z-index: -1;
-    border-radius: 4px;
+.button.primary-button:hover {
+  background: whitesmoke;
+  background-clip: padding-box;
+  color: black;
 }
 
-.button.secondary-button{
-    background: white;
-    background-clip: padding-box;
-    transition: background .6s ease;
+.button.primary-button::after,
+.button.secondary-button::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: var(--gradient-color);
+  content: ' ';
+  z-index: -1;
+  border-radius: 4px;
 }
 
-.button.secondary-button:hover{
-    background: var(--gradient-color);
-    color: whitesmoke;
-    box-shadow: var(--box-shadow);
+.button.secondary-button {
+  background: white;
+  background-clip: padding-box;
+  transition: background 0.6s ease;
 }
 
-p.para{
-    color: var(--text-color);
-    font: normal 500 16px/ 25px var(--roboto);
+.button.secondary-button:hover {
+  background: var(--gradient-color);
+  color: whitesmoke;
+  box-shadow: var(--box-shadow);
 }
 
-.font-roboto{
-    font-family: var(--roboto);
+p.para {
+  color: var(--text-color);
+  font: normal 500 16px/ 25px var(--roboto);
+}
+
+.font-roboto {
+  font-family: var(--roboto);
 }
 
 button:focus,
-button:active
-button:hover
-.btn:active,
-.btn.active{
-    outline: 0px !important;
-    box-shadow: none !important;
+button:active button:hover .btn:active,
+.btn.active {
+  outline: 0px !important;
+  box-shadow: none !important;
 }
 
-.title-h1{
-    font: normal bold 39px/ 40px var(--roboto);
+.title-h1 {
+  font: normal bold 39px/ 40px var(--roboto);
 }
 
-
-.navbar_fixed{
-    position: fixed;
-    width: 100%;
-    top: -1px;
-    left: 0; right: 0;
-    background: #ffffff;
-    box-shadow: var(--box-shadow);
-    z-index: 999;
-    transition: background 1s ease;
+.navbar_fixed {
+  position: fixed;
+  width: 100%;
+  top: -1px;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: var(--box-shadow);
+  z-index: 999;
+  transition: background 1s ease;
 }
 
-/* start navigation */ 
+/* start navigation */
 
-.header_area .main-menu .navbar .navbar-brand{
-    padding: 0 2rem 0 5rem;
+.header_area .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
 }
 
-.header_area .main-menu .navbar{
-    padding: 1rem 20rem ;
+.header_area .main-menu .navbar {
+  padding: 1rem 20rem;
 }
 
-.header_area .main-menu .navbar img{
-    width: 100px;
-    height: 55px;
-    margin-left: auto;
-    margin-right: auto;
+.header_area .main-menu .navbar img {
+  width: 100px;
+  height: 55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.header_area .main-menu .nav-item .nav-link{
-    font: normal 500 15px/2px var(--roboto);
-    text-transform: uppercase;
-    padding: 1.7rem;
-    color: var(--title-color);
+.header_area .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+  text-transform: uppercase;
+  padding: 1.7rem;
+  color: var(--title-color);
 }
 
-.header_area .main-menu .navbar-nav .active a{
-    background: var(--gradient-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.header_area .main-menu .navbar-nav .active a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.header_area .main-menu .navbar-nav a:hover{
-    background: var(--gradient-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.header_area .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* end navigation */
 
-/* end navigation */ 
-
-/* Banner Area */ 
+/* Banner Area */
 
 /* .site-main .site-banner {
     background: url(../img/{63A295B1-18CD-4D4D-ABF5-6D33BA6B9E01}Tottenham\ Stadium\ 1.webp) no-repeat 50% 50%;
 } */
 
-.site-main .site-banner .site-title h3{
-    padding-top: 35%;
-    font-weight: 500;
+.site-main .site-banner .site-title h3 {
+  padding-top: 35%;
+  font-weight: 500;
 }
 
-.site-main .site-banner .site-title h3::after{
-    /* content: " "; */
-    height: 2px;
-    width: 18vw;
-    background: black;
-    display: inline-block;
-    margin-left: 5%;
-    transform: translateY(-10px);
+.site-main .site-banner .site-title h3::after {
+  /* content: " "; */
+  height: 2px;
+  width: 18vw;
+  background: black;
+  display: inline-block;
+  margin-left: 5%;
+  transform: translateY(-10px);
 }
 
-.site-main .site-banner .site-title h1{
-    font-size: 3.5rem;
+.site-main .site-banner .site-title h1 {
+  font-size: 3.5rem;
 }
 
-.site-main .site-banner .site-title h4{
-    font-size: 1.5rem;
+.site-main .site-banner .site-title h4 {
+  font-size: 1.5rem;
 }
 
-.site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
-    width: 90rem;
+.site-main .site-banner .banner-image > img {
+  padding: 7rem 0;
+  width: 90rem;
 }
 
+/* End Banner Area */
 
+/* Start About Area */
 
-/* End Banner Area */ 
-
-/* Start About Area */ 
-
-.about-area{
-    padding: 8rem 5rem;
+.about-area {
+  padding: 8rem 5rem;
 }
 
-.site-main .about-area .about-title h2 > span{
-    display: block;
-    font: normal bold 49px/ 60px var(--roboto);
-    letter-spacing: 21px;
+.site-main .about-area .about-title h2 > span {
+  display: block;
+  font: normal bold 49px/ 60px var(--roboto);
+  letter-spacing: 21px;
 }
 
-.site-main .about-area .about-title .paragraph > p{
-    padding: .4rem 0;
+.site-main .about-area .about-title .paragraph > p {
+  padding: 0.4rem 0;
 }
 
-/* End About Area */ 
+/* End About Area */
 
-/* Subscribe me */ 
+/* Subscribe me */
 
-.site-main .subscribe-us-area .subscribe{
-    background: url(../img/subscribe-bg.png) no-repeat;
-    padding: 10rem 0;
-    margin: 3rem auto;
+.site-main .subscribe-us-area .subscribe {
+  background: url(../img/subscribe-bg.png) no-repeat;
+  padding: 10rem 0;
+  margin: 3rem auto;
 }
 
-.site-main .subscribe-us-area .subscribe .subscribe-title h4{
-    font: normal 700 30px/ 30px var(--roboto);
-    color: whitesmoke;
+.site-main .subscribe-us-area .subscribe .subscribe-title h4 {
+  font: normal 700 30px/ 30px var(--roboto);
+  color: whitesmoke;
 }
 
-.site-main .subscribe-us-area .subscribe .subscribe-title p{
-    color: whitesmoke;
-    padding: 1rem 4rem;
+.site-main .subscribe-us-area .subscribe .subscribe-title p {
+  color: whitesmoke;
+  padding: 1rem 4rem;
 }
 
-.site-main .subscribe-us-area .subscribe form .input-textbox input{
-    width: 400px;
-    padding: 1.5rem 1rem;
-    border: 1px solid whitesmoke;
-    background: transparent;
-    color: white;
-    font: normal 500 17px/20px var(--roboto);
+.site-main .subscribe-us-area .subscribe form .input-textbox input {
+  width: 400px;
+  padding: 1.5rem 1rem;
+  border: 1px solid whitesmoke;
+  background: transparent;
+  color: white;
+  font: normal 500 17px/20px var(--roboto);
 }
 
-.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder{
-    color: whitesmoke;
+.site-main
+  .subscribe-us-area
+  .subscribe
+  form
+  .input-textbox
+  input::placeholder {
+  color: whitesmoke;
 }
 
-.site-main .subscribe-us-area .subscribe form .btn-submit button{
-    background: whitesmoke;
-    color: #000;
-    padding: .7rem 2rem;
+.site-main .subscribe-us-area .subscribe form .btn-submit button {
+  background: whitesmoke;
+  color: #000;
+  padding: 0.7rem 2rem;
 }
 
-/* End subscribe me */ 
+/* End subscribe me */
 
-/* Footer Area */ 
+/* Footer Area */
 
 /* 
 ---------------------------------------------
@@ -264,65 +263,85 @@ footer
 --------------------------------------------- 
 */
 footer {
-    background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
-    padding-top: 30px;
-  }
-  
-  footer .social {
-    overflow: hidden;
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  footer .social li {
-    margin: 0px 10px;
-    display: inline-block;
-  }
-  
-  footer .social li a {
-    color: #9d5bd9;
-     text-align: center;
-    background-color: #fff;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-  
-  footer .social li a:hover {
-    background-color: #ff589e;
-    color: #fff;
-  }
-  
-  footer .copyright {
-    text-align: center;
-    border-top: 1px solid rgba(250,250,250,0.2);
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-weight: 400;
-    font-size: 12px;
-    color: #fff;
-    letter-spacing: 0.88px;
-    text-transform: uppercase;
-  }
-  
-  @media (max-width: 991px) {
-    footer .text {
-      margin-bottom: 30px;
-    }
-    footer h5 {
-      margin-bottom: 15px;
-    }
-    footer .footer-nav {
-      margin-bottom: 30px;
-    }
-  }
+  background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+  padding-top: 30px;
+}
 
-/* End Footer */ 
+footer .social {
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer .social li {
+  margin: 0px 10px;
+  display: inline-block;
+}
+
+footer .social li a {
+  color: #9d5bd9;
+  text-align: center;
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+footer .social li a:hover {
+  background-color: #ff589e;
+  color: #fff;
+}
+
+footer .copyright {
+  text-align: center;
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  footer .text {
+    margin-bottom: 30px;
+  }
+  footer h5 {
+    margin-bottom: 15px;
+  }
+  footer .footer-nav {
+    margin-bottom: 30px;
+  }
+}
+
+/* End Footer */
+#panel {
+  position: relative;
+  padding: 3rem 1rem;
+  background: teal;
+  color: white;
+}
+#panel .nav-link {
+  color: white;
+}
+.close {
+  height: 4rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.close i {
+  font-size: x-large;
+  color: red;
+}
