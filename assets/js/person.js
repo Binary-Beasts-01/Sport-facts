@@ -1,8 +1,9 @@
-import {fetchPlayerData} from "./api.js";
+import {fetchPlayerData, fetchPlayerHonor} from "./api.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const playerName = urlParams.get('name').replaceAll(" ", "_");
 const aboutPlayer = document.querySelector("#about-player");
+const playerHonor = document.querySelector("#player-honor");
 
 let output = '';
 
@@ -27,5 +28,38 @@ function addPlayerDetail(data) {
                         </div>
                     </div>
                 </div>`;
+    console.log(data.idPlayer);
+    fetchPlayerHonor(data.idPlayer, addPlayerHonor);
     aboutPlayer.innerHTML = output;
+}
+
+function addPlayerHonor(data) {
+    let temp = '';
+    for (let honor of data.honors) {
+        temp += `<div class="swiper-slide d-flex align-items-center justify-content-center m-2" style="background-color: #ebebf2; border-top: .3125em solid #351c75">
+                    <div>
+                        <p>Won ${honor.strHonour}</p>
+                        <p>With ${honor.strTeam}</p>
+                        <p>In ${honor.strSeason}</p>
+                    </div>
+                </div>`
+    }
+    // console.log(temp);
+    playerHonor.innerHTML = temp;
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
 }
