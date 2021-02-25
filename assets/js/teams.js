@@ -24,14 +24,12 @@ fetchAllTeamsInALeague('spanish_La_Liga');
 
 function addTeams(teams, league) {
   let output = '';
-  counter = 0;
   for (team of teams) {
-    if (counter == 10) break;
     let o = document.createElement('div');
     o.className += `col-lg-3 col-md-4 col-sm-12 element-item ${team.strCountry}`;
     o.innerHTML = `<div class="our-project">
     <div class="img">
-        <a class="test-popup-link" href="${team.strTeamBadge}">
+        <a class="test-popup-link" href="teamDetail.html?name=${team.strTeam}">
             <img src="${team.strTeamBadge}" alt="portfolio-1"
                 class="img-fluid">
         </a>
@@ -43,7 +41,5 @@ function addTeams(teams, league) {
 </div>`;
     teamSection.appendChild(o);
     $('.project-area .grid').isotope('insert', o);
-    counter++;
   }
-  console.log(teamSection);
 }
