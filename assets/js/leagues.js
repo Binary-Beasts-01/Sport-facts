@@ -21,14 +21,15 @@ fetchAllLeague();
 function addLeagues(leagues) {
   leagues.forEach((league) => {
     let o = document.createElement('div');
-
     o.className += `col-lg-3 col-md-4 col-sm-12 element-item mb-3`;
     o.innerHTML = `<div class="card" style="width: 18rem;">
+    <a class="btn stretched-link" href="leagueDetail.html?name=${league.strLeague}&id=${league.idLeague}">
     <div class="card-body">
       <h5 class="card-title league-name">${league.strLeague}</h5>
       <h6 class="card-subtitle mb-2 text-muted league-type">${league.strSport}</h6>
       <p class="card-text">${league.strLeagueAlternate}</p>
     </div>
+    </a>
   </div>`;
     leagueSection.appendChild(o);
   });
