@@ -22,60 +22,43 @@ function addLeagues(leagues) {
   let counter = 0;
   leagues.forEach((league) => {
     let o = document.createElement('div');
-    o.className += `col-lg-3 col-md-4 col-sm-12 element-item`;
-    o.innerHTML = `<div class="our-project">
-          <h2>${league.strLeague}</h2>
-        <div class="title py-4">
-            <h4 class="text-uppercase league-name">${league.strSport}</h4>
-            <span class="text-secondary league-stats">${league.strLeagueAlternate}</span>
-        </div>
-    </div>`;
+
+    o.className += `col-lg-3 col-md-4 col-sm-12 element-item mb-3`;
+    o.innerHTML = `<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title league-name">${league.strLeague}</h5>
+      <h6 class="card-subtitle mb-2 text-muted league-type">${league.strSport}</h6>
+      <p class="card-text">${league.strLeagueAlternate}</p>
+    </div>
+  </div>`;
     leagueSection.appendChild(o);
   });
-  //   for (x in leagues) {
-  //     console.log(x);
-  //     counter++;
-  //     if (counter >= 20) {
-  //       break;
-  //     }
-  //     let o = document.createElement('div');
-  //     o.className += `col-lg-3 col-md-4 col-sm-12 element-item`;
-  //     o.innerHTML = `<div class="our-project">
-  //         <h2>${x.strLeague}</h2>
-  //       <div class="title py-4">
-  //           <h4 class="text-uppercase league-name">${x.strSport}</h4>
-  //           <span class="text-secondary league-stats">${x.strLeagueAlternate}</span>
-  //       </div>
-  //   </div>`;
-  //     leagueSection.appendChild(o);
-  //     $('.project-area .grid').isotope('insert', o);
-  //   }
 }
 
-// const searchBtn = document.querySelector('#search-btn');
-// const searchInput = document.querySelector('#search-input');
+const searchBtn = document.querySelector('#search-btn-league');
+const searchInput = document.querySelector('#search-input-league');
 
-// searchBtn.addEventListener('click', filterClub);
-// searchInput.addEventListener('keyup', filterClub);
+searchBtn.addEventListener('click', filterLeague);
+searchInput.addEventListener('keyup', filterLeague);
 
-// // team filtering
-// function filterClub(e) {
-//   e.preventDefault();
-//   let query = searchInput.value.trim();
-//   let clubs = document.querySelectorAll('#teamsByLeague .player-name');
-//   clubs.forEach((el) => {
-//     let par = el.parentElement.parentElement.parentElement;
-//     if (query != '') {
-//       if (el.textContent.toLowerCase().startsWith(query.toLowerCase())) {
-//         par.style.display = 'block';
-//         par.style.position = 'static';
-//       } else {
-//         par.style.display = 'none';
-//         par.style.position = 'static';
-//       }
-//     } else {
-//       par.style.display = 'block';
-//       par.style.position = 'static';
-//     }
-//   });
-// }
+// team filtering
+function filterLeague(e) {
+  e.preventDefault();
+  let query = searchInput.value.trim();
+  let clubs = document.querySelectorAll('#listOfLeagues .league-name');
+  clubs.forEach((el) => {
+    let par = el.parentElement.parentElement;
+    if (query != '') {
+      if (el.textContent.toLowerCase().includes(query.toLowerCase())) {
+        par.style.display = 'block';
+        par.style.position = 'static';
+      } else {
+        par.style.display = 'none';
+        par.style.position = 'static';
+      }
+    } else {
+      par.style.display = 'block';
+      par.style.position = 'static';
+    }
+  });
+}
