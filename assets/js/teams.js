@@ -43,3 +43,31 @@ function addTeams(teams, league) {
     $('.project-area .grid').isotope('insert', o);
   }
 }
+
+const searchBtn = document.querySelector('#search-btn');
+const searchInput = document.querySelector('#search-input');
+
+searchBtn.addEventListener('click', filterClub);
+searchInput.addEventListener('keyup', filterClub);
+
+// team filtering
+function filterClub(e) {
+  e.preventDefault();
+  let query = searchInput.value.trim();
+  let clubs = document.querySelectorAll('#teamsByLeague .player-name');
+  clubs.forEach((el) => {
+    let par = el.parentElement.parentElement.parentElement;
+    if (query != '') {
+      if (el.textContent.toLowerCase().startsWith(query.toLowerCase())) {
+        par.style.display = 'block';
+        par.style.position = 'static';
+      } else {
+        par.style.display = 'none';
+        par.style.position = 'static';
+      }
+    } else {
+      par.style.display = 'block';
+      par.style.position = 'static';
+    }
+  });
+}

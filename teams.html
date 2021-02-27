@@ -84,8 +84,10 @@
                     <div class="search-bar row">
                         <h1 class="text-uppercase title-h1">teams</h1>
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                    class="fas fa-search"></i></button>
                         </form>
                     </div>
                 </div>
@@ -100,125 +102,7 @@
                 </div>
 
                 <div class="row grid" id="teamsByLeague">
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item germany">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/team1.png">
-                                    <img src="./assets/img/team1.png" alt="portfolio-1"
-                                        class="img-fluid rounded-circle">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Manchester United</h4>
-                                <span class="text-secondary player-stats">Latest, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item england">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/realmadrid.png">
-                                    <img src="./assets/img/realmadrid.png" alt="portfolio-2" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Real Madrid</h4>
-                                <span class="text-secondary player-stats">Popular, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item england">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/barcelona.png">
-                                    <img src="./assets/img/barcelona.png" alt="portfolio-3" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Barcelona</h4>
-                                <span class="text-secondary player-stats">Popular, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item france">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/lakers.png">
-                                    <img src="./assets/img/lakers.png" alt="portfolio-4" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">LA Lakers</h4>
-                                <span class="text-secondary player-stats">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item france">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/live.png">
-                                    <img src="./assets/img/live.png" alt="portfolio-5" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Liverpool</h4>
-                                <span class="text-secondary player-stats">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item italy">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/realmadrid.png">
-                                    <img src="./assets/img/realmadrid.png" alt="portfolio-6" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">real Madrid</h4>
-                                <span class="text-secondary player-stats">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item italy">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/chelsea.png">
-                                    <img src="./assets/img/chelsea.png" alt="portfolio-7" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Chelsea</h4>
-                                <span class="text-secondary player-stats">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item spain">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/barcelona.png">
-                                    <img src="./assets/img/barcelona.png" alt="portfolio-8" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Barcelona</h4>
-                                <span class="text-secondary player-stats">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item spain">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./assets/img/team1.png">
-                                    <img src="./assets/img/team1.png" alt="portfolio-9"
-                                        class="img-fluid rounded-circle">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase player-name">Machester United</h4>
-                                <span class="text-secondary player-stats">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
