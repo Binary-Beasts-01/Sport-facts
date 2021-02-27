@@ -30,7 +30,7 @@ function addTeams(teams, league) {
     o.className += `col-lg-3 col-md-4 col-sm-12 element-item ${team.strCountry}`;
     o.innerHTML = `<div class="our-project">
     <div class="img">
-        <a class="test-popup-link" href="teamDetail.html?name=${team.strTeam}">
+        <a class="test-popup-link" href="teamDetail.html?name=${team.strTeam}&id=${team.idTeam}">
             <img src="${team.strTeamBadge}" alt="portfolio-1"
                 class="img-fluid">
         </a>

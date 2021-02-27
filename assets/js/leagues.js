@@ -19,7 +19,6 @@ leagueSection.innerHTML = '';
 fetchAllLeague();
 
 function addLeagues(leagues) {
-  let counter = 0;
   leagues.forEach((league) => {
     let o = document.createElement('div');
 

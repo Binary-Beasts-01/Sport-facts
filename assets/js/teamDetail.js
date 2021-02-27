@@ -1,16 +1,46 @@
-import {fetchTeamData} from "./api.js";
+import { fetchTeamData, fetchTeamEvent } from './api.js';
 
 const urlParams = new URLSearchParams(window.location.search);
-const teamName = urlParams.get('name').replaceAll(" ", "_");
-const teamSection = document.querySelector("#selectedTeamDetail");
-
+const teamName = urlParams.get('name').replaceAll(' ', '_');
+const teamID = urlParams.get('id').replaceAll(' ', '_');
+const teamSection = document.querySelector('#selectedTeamDetail');
+const teamEvent = document.querySelector('#selectedTeamEvent .row');
 
 fetchTeamData(teamName, addTeamDetail);
+fetchTeamEvent(teamID, addTeamEvent);
+
+function addTeamEvent(p) {
+  addEvent(p);
+}
+
+function addEvent(events) {
+  let temp = '';
+  for (let event of events) {
+    temp += `
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
+    <div class="card text-center">
+    <div class="card-header">
+      ${event.strLeague}
+    </div>
+    <img src="${event.strThumb}" class="card-img-left" alt="match">
+    <div class="card-body">
+      <h5 class="card-title">${event.strFilename}</h5>
+      <h6 class="card-title">Type: ${event.strSport}</h6>
+      <h6 class="card-title">Season: ${event.strSeason}</h6>
+      <p class="card-text">${event.strHomeTeam} ${event.intHomeScore} : ${event.intAwayScore} ${event.strAwayTeam}</p>
+    </div>
+  </div>
+    </div>
+    `;
+  }
+  // console.log(temp);
+  teamEvent.innerHTML = temp;
+}
 
 function addTeamDetail(data) {
-    let output;
-    data = data.teams[0];
-    output = `<div class="row mx-5">
+  let output;
+  data = data.teams[0];
+  output = `<div class="row mx-5">
                 <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center">
                     <div class="about-image">
                         <img src="${data.strTeamJersey}" alt="About us" class="img-fluid">
@@ -27,7 +57,7 @@ function addTeamDetail(data) {
                     </div>
                 </div>
             </div>`;
-    output += `<div class="row mx-5">
+  output += `<div class="row mx-5">
                 <div class="col-lg-6 col-md-12 about-title">
                 <h2 class="text-uppercase pt-5">
                 <span>${data.strStadium}</span>
@@ -44,8 +74,5 @@ function addTeamDetail(data) {
                     </div>
                 </div>
             </div>`;
-    teamSection.innerHTML = output;
+  teamSection.innerHTML = output;
 }
-
-
-
