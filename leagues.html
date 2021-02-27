@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sport Facts</title>
+    <title>Sport Leagues</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/js/Magnific-Popup/dist/magnific-popup.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/person.css">
+    <link rel="stylesheet" href="./assets/css/player.css">
 
 </head>
 
@@ -37,12 +36,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="players.html">Players</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="leagues.html">Leagues</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contacts.html">contact</a>
             </li>
+
         </ul>
     </div>
     <!-- Header section -->
@@ -69,13 +69,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="players.html">Players</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="leagues.html">Leagues</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacts.html">contact</a>
                         </li>
-
                     </ul>
                 </div>
             </nav>
@@ -83,27 +82,30 @@
     </header>
 
     <!-- Main section -->
-    <main class="site-main">
-        <!-- Profile section -->
-        <section class="about-area">
-            <div class="container-fluid" id="about-player">
-            </div>
-        </section>
-        <div class="about-title">
-            <h2 class="text-center mt-5"><span>Awards</span></h2>
-        </div>
+    <section class="site-main">
 
-        <!-- Trophies section -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper" id="player-honor">
-                <div class="swiper-slide">
+        <!-- Player section -->
+        <section class="project-area">
+            <div class="container">
+                <div class="project-title pb-5">
+                    <div class="search-bar row">
+                        <h1 class="text-uppercase title-h1">World Leagues</h1>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input id="search-input-player" class="form-control mr-sm-2" type="search"
+                                placeholder="Search for player..." aria-label="Search">
+                            <button id="search-btn-player" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row grid" id="listOfLeagues">
 
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-    </main>
+        </section>
+
+    </section>
 
     <!-- Footer section -->
     <footer>
@@ -126,15 +128,15 @@
         </div>
     </footer>
 
+
     <script src="./assets/js/jquery.3.4.1.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/scotch-panels-master/dist/scotchPanels.min.js"></script>
     <script src="./assets/js/isotope.min.js"></script>
     <script src="./assets/js/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script type="module" src="./assets/js/person.js"></script>
+    <script type="module" src="./assets/js/leagues.js"></script>
 
 </body>
 
