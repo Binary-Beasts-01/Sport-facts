@@ -12,6 +12,34 @@ export function fetchTeamData(query, callback) {
     });
 }
 
+export function fetchLeagueData(id, callback) {
+  fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${id}`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      let products = json;
+      callback(products.leagues[0]);
+    })
+    .catch(function (err) {
+      console.log('Fetch problem: ' + err.message);
+    });
+}
+
+export function fetchLeagueEvent(id, callback) {
+  fetch(`https://www.thesportsdb.com/api/v1/json/1/eventslast.php?id=${id}`)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      let products = json;
+      callback(products.results);
+    })
+    .catch(function (err) {
+      console.log('Fetch problem: ' + err.message);
+    });
+}
+
 export function fetchTeamEvent(id, callback) {
   fetch(`https://www.thesportsdb.com/api/v1/json/1/eventslast.php?id=${id}`)
     .then(function (response) {
