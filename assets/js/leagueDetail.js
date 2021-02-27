@@ -7,9 +7,9 @@ const leagueSection = document.querySelector('#selectedLeagueDetail');
 const leagueEvent = document.querySelector('#selectedLeageEvent .row');
 
 fetchLeagueData(leagueID, addLeagueDetail);
-// fetchLeagueEvent(leagueID, addTeamEvent);
+fetchLeagueEvent(leagueID, addLeagueEvent);
 
-function addTeamEvent(p) {
+function addLeagueEvent(p) {
   addEvent(p);
 }
 

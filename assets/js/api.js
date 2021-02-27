@@ -27,13 +27,15 @@ export function fetchLeagueData(id, callback) {
 }
 
 export function fetchLeagueEvent(id, callback) {
-  fetch(`https://www.thesportsdb.com/api/v1/json/1/eventslast.php?id=${id}`)
+  fetch(
+    `https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id=${id}`
+  )
     .then(function (response) {
       return response.json();
     })
     .then(function (json) {
       let products = json;
-      callback(products.results);
+      callback(products.events);
     })
     .catch(function (err) {
       console.log('Fetch problem: ' + err.message);
