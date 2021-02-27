@@ -1,7 +1,6 @@
 import { fetchLeagueData, fetchLeagueEvent } from './api.js';
 
 const urlParams = new URLSearchParams(window.location.search);
-const leagueName = urlParams.get('name').replaceAll(' ', '_');
 const leagueID = urlParams.get('id').replaceAll(' ', '_');
 const leagueSection = document.querySelector('#selectedLeagueDetail');
 const leagueEvent = document.querySelector('#selectedLeageEvent .row');
@@ -33,7 +32,6 @@ function addEvent(events) {
     </div>
     `;
   }
-  // console.log(temp);
   leagueEvent.innerHTML = temp;
 }
 
