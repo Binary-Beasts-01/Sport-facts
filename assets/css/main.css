@@ -293,10 +293,32 @@ footer .social li a {
   transition: all 0.3s ease 0s;
 }
 
-footer .social li a:hover {
+/* footer .social li a:hover {
   background-color: #ff589e;
   color: #fff;
+} */
+
+footer .social .facebook a:hover  {
+  background-color: #3b5998;
+  color: #fff;
 }
+footer .social .twitter a:hover  {
+  background-color: #1da1f2;
+  color: #fff;
+}
+footer .social .linkedin a:hover  {
+  background-color: #04669A;
+  color: #fff;
+}
+footer .social .google a:hover  {
+  background-color:#C20806;
+  color: #fff;
+}
+footer .social .instagram a:hover  {
+  background-color:#2C6A93;
+  color: #fff;
+}
+
 
 footer .copyright {
   text-align: center;
