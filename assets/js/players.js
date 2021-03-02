@@ -1,3 +1,5 @@
+const loader = document.querySelector('.s');
+loader.classList.add('active');
 import { fetchPlayerData } from './api.js';
 
 const listOfPlayers = document.querySelector('#listOfFootballPlayers');
@@ -34,6 +36,7 @@ function addPlayer(player) {
   </div>`;
   listOfPlayers.appendChild(o);
   $('.project-area .grid').isotope('insert', o);
+  loader.classList.remove('active');
 }
 
 const searchBtn = document.querySelector('#search-btn-player');

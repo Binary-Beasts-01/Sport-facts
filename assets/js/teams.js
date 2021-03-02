@@ -1,4 +1,6 @@
 const teamSection = document.querySelector('#teamsByLeague');
+const loader = document.querySelector('.s');
+loader.classList.add('active');
 
 function fetchAllTeamsInALeague(leagueName) {
   fetch(
@@ -11,6 +13,7 @@ function fetchAllTeamsInALeague(leagueName) {
       let products = json;
       let teams = shuffle(products.teams);
       addTeams(teams);
+      loader.classList.remove('active');
     })
     .catch(function (err) {
       console.log('Fetch problem: ' + err.message);

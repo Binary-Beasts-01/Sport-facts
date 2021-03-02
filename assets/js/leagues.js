@@ -1,4 +1,6 @@
 const leagueSection = document.querySelector('#listOfLeagues');
+const loader = document.querySelector('.s');
+loader.classList.add('active');
 
 function fetchAllLeague() {
   fetch(`https://www.thesportsdb.com/api/v1/json/1/all_leagues.php`)
@@ -9,6 +11,7 @@ function fetchAllLeague() {
       let leagues = json.leagues.slice(0, 30);
       let l = shuffle(leagues);
       addLeagues(l);
+      loader.classList.remove('active');
     })
     .catch(function (err) {
       console.log('Fetch problem: ' + err.message);
