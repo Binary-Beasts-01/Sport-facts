@@ -90,16 +90,22 @@
                     <div class="search-bar row">
                         <h1 class="text-uppercase title-h1">teams</h1>
                         <form class="form-inline my-2 my-lg-0">
-                            <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search"
+                            <div class="row">
+                                    <div class="col col-xs-9">
+                            <input id="search-input" class="form-control my-2 my-sm-0" type="search" placeholder="Search"
                                 aria-label="Search">
+                                    </div>
+                                    <div class="col col-xs-3">
                             <button id="search-btn" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
                                     class="fas fa-search"></i></button>
+                                </div>
+                                </div>
                         </form>
                     </div>
                 </div>
 
                 <div class="button-group">
-                    <button type="button" class="active" id="btn1" data-filter="*">All</button>
+                    <button type="button" class="active" style="padding-left: 4em;" id="btn1" data-filter="*">All</button>
                     <button type="button" data-filter=".England">England</button>
                     <button type="button" data-filter=".Germany">Germany</button>
                     <button type="button" data-filter=".Spain">Spain</button>
