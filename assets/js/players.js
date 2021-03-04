@@ -39,11 +39,40 @@ function addPlayer(player) {
   loader.classList.remove('active');
 }
 
+function displaySearchResult(player) {
+  player = player.player[0];
+  console.log(player);
+  listOfPlayers.innerHTML = ""
+  let o = document.createElement('div');
+  o.className += `col-lg-3 col-md-4 col-sm-12 element-item`;
+  o.innerHTML = `<div class="our-project">
+      <div class="img">
+          <a class="test-popup-link" href="person.html?name=${player.strPlayer}">
+              <img src="${player.strThumb}" alt="portfolio-1"
+                  class="img-fluid">
+          </a>
+      </div>
+      <div class="title py-4">
+          <h4 class="text-uppercase player-name">${player.strPlayer}</h4>
+          <span class="text-secondary player-stats">${player.strPosition}, ${player.strTeam}</span>
+      </div>
+  </div>`;
+  listOfPlayers.appendChild(o);
+  $('.project-area .grid').isotope('insert', o);
+  loader.classList.remove('active');
+}
+
 const searchBtn = document.querySelector('#search-btn-player');
 const searchInput = document.querySelector('#search-input-player');
 
-searchBtn.addEventListener('click', filterPlayer);
+searchBtn.addEventListener('click', searchPlayer);
 searchInput.addEventListener('keyup', filterPlayer);
+
+function searchPlayer(e) {
+  e.preventDefault()
+  let query = searchInput.value.toString().replaceAll(" ", "_")
+  fetchPlayerData(query, displaySearchResult)
+}
 
 // team filtering
 function filterPlayer(e) {
