@@ -2,6 +2,7 @@
 
 .site-main .about-area .about-title p{
     padding: 1rem 7rem;
+    margin-top: 0   ;
 }
 
 .site-main .about-area .client{
@@ -16,6 +17,7 @@
 
 .site-main .about-area .client .about-client{
     padding-top: 2rem;
+    margin-top: 0;
 }
 
 .site-main .about-area .client .about-client h4{
@@ -45,7 +47,8 @@
 /* Services Area */ 
 
 .site-main .services-area{
-    padding: 7rem 2rem;
+    padding: 6rem 2rem 0 2rem;
+    margin-top: 0;
 }
 
 .site-main .services-area .services-title{
